@@ -1,0 +1,1 @@
+﻿document.domain = 'teacheredu.cn';

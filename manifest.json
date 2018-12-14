@@ -1,0 +1,45 @@
+{
+    "name": "Teacher Extension",
+    "version": "2.1",
+    "manifest_version": 2,
+    "description": "给老婆学习用的插件.",
+    "icons": {
+        "128": "icon/o6.png"
+    },
+    "background": {
+        "scripts": [
+            "background.js"
+        ]
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "http://www.hateacher.cn/*",
+                "http://study.teacheredu.cn/*"
+            ],
+            "css": [],
+            "js": [
+                "js/jquery-1.7.1.min.js",
+                "js/common.js",
+                "js/pager.js",
+                "js/domain.js",
+                "myscript.js"
+                
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "http://*/*",
+        "bookmarks",
+        "cookies"
+    ],
+    "browser_action": {
+        "default_title": "学习扩展",
+        "default_icon": "icon/o6.png",
+        "default_popup": "popup.html"
+    },
+    "chrome_url_overrides": {
+        "newtab": "myPage.html"
+    }
+}
